@@ -22,7 +22,6 @@
       position: relative;
     }
 
-    /* Background image full screen */
     .background {
       position: absolute;
       top: 0;
@@ -33,16 +32,20 @@
       z-index: 0;
     }
 
-    /* Text overlay */
     .overlay {
       position: absolute;
-      top: 50%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #fff;
+      color: #000;
       text-align: center;
       z-index: 1;
-      text-shadow: 2px 2px 0 #222, 4px 4px 0 #000;
+      text-shadow:
+        1px 1px 0 #ccc,
+        2px 2px 0 #bbb,
+        3px 3px 0 #aaa,
+        4px 4px 0 #999,
+        5px 5px 0 #888;
     }
 
     .overlay h1 {
@@ -57,10 +60,8 @@
   </style>
 </head>
 <body>
-  <!-- Your background image -->
   <img src="logo.png" alt="Background" class="background" />
 
-  <!-- Text overlay with 3D effect -->
   <div class="overlay">
     <h1>Coming Soon</h1>
     <p>We’re working on something amazing. Stay tuned!</p>
