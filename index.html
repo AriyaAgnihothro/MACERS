@@ -10,21 +10,60 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     html, body {
       width: 100%;
       height: 100%;
-      background: black;
+      font-family: 'Segoe UI', sans-serif;
       overflow: hidden;
     }
-    img {
+
+    body {
+      position: relative;
+    }
+
+    /* Background image full screen */
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      display: block;
+      z-index: 0;
+    }
+
+    /* Text overlay */
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 1;
+      text-shadow: 2px 2px 0 #222, 4px 4px 0 #000;
+    }
+
+    .overlay h1 {
+      font-size: 4em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    .overlay p {
+      font-size: 1.5em;
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Coming Soon" />
+  <!-- Your background image -->
+  <img src="logo.png" alt="Background" class="background" />
+
+  <!-- Text overlay with 3D effect -->
+  <div class="overlay">
+    <h1>Coming Soon</h1>
+    <p>We’re working on something amazing. Stay tuned!</p>
+  </div>
 </body>
 </html>
